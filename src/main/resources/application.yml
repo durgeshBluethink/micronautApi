@@ -1,0 +1,32 @@
+micronaut:
+  application:
+    name: apiCrud
+#datasources:
+#
+#  default:
+#    url: jdbc:mysql://localhost:3306/mydatabase
+#    username: root
+#    password: root
+#    driverClassName: com.mysql.cj.jdbc.Driver
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/mydatabase
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+jpa:
+  default:
+    entity-scan:
+      packages: 'com.bluethink.dev'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
+netty:
+  default:
+    allocator:
+      max-order: 3
+
